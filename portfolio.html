@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Meus Projetos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- MENU (IDÊNTICO EM TODAS AS PÁGINAS) -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color: inherit; text-decoration: none;">Natália</a>
+        </div>
+        <button id="menu-icon" class="menu-icon">☰</button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="formacao.html">Formação</a></li>
+            <li><a href="portfolio.html" class="active-link">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><button id="theme-toggle">Trocar Tema</button></li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO ESPECÍFICO DO PORTFÓLIO -->
+    <main class="container">
+        <h1>Meus Projetos</h1>
+        <div class="grid-portfolio">
+            <article class="projeto-card">
+                <h3>Sistema de Gestão de Notas</h3>
+                <p>CRUD desenvolvido em React para gerenciamento de notas de alunos.</p>
+                <a href="https://github.com/nunesaluna/CRUD-em-React--sistema-de-notas" target="_blank">Ver no GitHub</a>
+            </article>
+
+            <article class="projeto-card">
+                <h3>Currículo Online Profissional</h3>
+                <p>Currículo criado em React usando Flexbox, Grid e o Framework Tailwind.</p>
+                <a href="https://github.com/nunesaluna/meu-curriculo-react" target="_blank">Ver no GitHub</a>
+            </article>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+/* Variáveis para facilitar a troca de tema */
+:root {
+    --bg-body: #f4f4f4;
+    --bg-card: #ffffff;
+    --text-color: #333;
+    --primary-color: #007bff;
+}
+
+/* Classe de Tema Escuro (Ativada via JS) */
+body.dark-mode {
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --text-color: #f4f4f4;
+    --primary-color: #375a7f;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    transition: 0.3s;
+}
+
+/* Estilo do Menu */
+.navbar {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Formulário */
+.container { padding: 2rem 5%; }
+
+form {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.campo { margin-bottom: 15px; }
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-enviar {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Responsividade (Celular) */
+@media (max-width: 768px) {
+    .menu-icon { display: block; }
+    
+    .nav-links {
+        display: none; /* Escondido por padrão no mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 20px;
+    }
+
+    .nav-links.active { display: flex; } /* Mostra quando clicado */
+}
+
+/* Estilo da Tabela */
+.tabela-formacao {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--bg-card);
+}
+
+.tabela-formacao th, .tabela-formacao td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabela-formacao th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Estilo do Portfólio (Grid) */
+.grid-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.projeto-card {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.projeto-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Estilo para o link da página onde o usuário está */
+.nav-links a.active-link {
+    color: #ffcc00; /* Uma cor de destaque, como dourado/amarelo */
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+}
+
+/* Estilo específico para a seção Sobre */
+.sobre-secao h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.perfil-img {
+    width: 250px; 
+    height: auto; /* Mantém a proporção real da foto para não achatar */
+    border-radius: 8px; /* Arredonda só um pouquinho os cantos */
+    border: 3px solid var(--primary-color); /* Adiciona uma borda elegante */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Dá um efeito de profundidade */
+    transition: transform 0.3s ease; /* Prepara para um efeito de passar o mouse */
+}
+
+/* Efeito extra: a foto aumenta levemente quando você passa o mouse */
+.perfil-img:hover {
+    transform: scale(1.05);
+}
+
+
+.texto-apresentacao h2 {
+    color: var(--primary-color);
+    margin-top: 20px;
+}
+
+/* Ajuste para celular */
+@media (max-width: 768px) {
+    .sobre-conteudo {
+        flex-direction: column; /* Foto em cima do texto no celular */
+        text-align: center;
+    }
+}

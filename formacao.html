@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Formação</title>
+    <!-- ESTA LINHA ABAIXO CARREGA O MEU CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- O MENU IGUAL EM TODAS AS PÁGINAS -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color: inherit; text-decoration: none;">Natália</a>
+        </div>
+        <button id="menu-icon" class="menu-icon">☰</button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Sobre mim</a></li>
+            <li><a href="formacao.html" class="active-link">Formação</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><button id="theme-toggle" class="btn-tema">Trocar Tema</button></li>
+        </ul>
+    </nav>
+
+        <main class="container">
+        <h1>Minha Formação</h1>
+        
+        <table class="tabela-formacao">
+            <thead>
+                <tr>
+                    <th>Curso / Instituição</th>
+                    <th>Nível</th>
+                    <th>Ano</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Análise e Desenvolvimento de Sistemas - UNINTER</td>
+                    <td>Ensino Superior</td>
+                    <td>2025 - Cursando</td>
+                </tr>
+                <tr>
+                    <td>Front-End em React - IFMG</td>
+                    <td>Certificação</td>
+                    <td>2025 - 2026</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- script ao final para o menu e o tema funcionarem -->
+    <script src="script.js"></script>
+</body>
+</html>
